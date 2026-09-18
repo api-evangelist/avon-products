@@ -1,0 +1,12 @@
+generated: '2026-09-18'
+method: searched
+source: https://www.avonworldwide.com/ (site walk via out-of-band fetch), https://www.avon-products.com/
+  (parked), 2026-09-18
+plan_count: 0
+plans: []
+note: 'An honest zero. Avon Products publishes no API and therefore no API plans or pricing: the corporate
+  site avonworldwide.com is a brand/corporate presence (about-us, careers, responsible-business, news)
+  with no developer, API, pricing or partner-program page, the historical corporate domain avon-products.com
+  is a GoDaddy for-sale page, and the former developer.avon.com host no longer resolves. Representative
+  sign-up and consumer retail run on country storefronts (my.avon.<cc>) that are not a developer product.
+  Nothing here is derived or assumed; this records that the search was run and found nothing published.'

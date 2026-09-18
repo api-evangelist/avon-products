@@ -23,32 +23,63 @@ accessModel:
   source: []
   generated: '2026-07-22'
   method: derived
-modified: '2026-04-19'
+modified: '2026-09-18'
 apis: []
 common:
+- type: Website
+  url: https://www.avonworldwide.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/avon/
 - type: DomainSecurity
   url: security/avon-products-domain-security.yml
-- type: Website
-  url: https://www.avon-products.com
-- type: Portal
-  url: https://developer.avon.com/
-- type: GitHubOrganization
-  url: https://github.com/avon
-- type: LinkedIn
-  url: https://www.linkedin.com/company/avon-products/
-description: >-
-  Avon Products is a global manufacturer and marketer of beauty and related products, primarily distributed through a network of independent sales representatives.
+- type: Plans
+  name: Plans and pricing
+  url: plans/avon-products-plans-pricing.yml
+- type: RateLimits
+  name: Rate limits
+  url: rate-limits/avon-products-rate-limits.yml
+- type: LLMsTxt
+  name: llms.txt
+  url: llms/avon-products-llms.txt
+description: Avon Products is a global manufacturer and marketer of beauty and related products, primarily
+  distributed through a network of independent sales representatives. Founded in 1886 and headquartered
+  in Northampton, UK as Avon International, it was owned by Natura &Co from 2020 until Regent acquired
+  it in January 2026; its corporate site is avonworldwide.com. The North American business (avon.com)
+  was separated in 2016 and has been run as a distinct company.
 name: Avon Products
 tags:
-  - Fortune 500
-  - Beauty
-  - E-Commerce
-  - Retail
-  - Direct Sales
-  - Consumer Goods
+- Fortune 500
+- Beauty
+- E-Commerce
+- Retail
+- Direct Sales
+- Consumer Goods
 created: '2026-01-01'
 type: Index
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/avon-products.png
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-18'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Avon Products is a direct-selling beauty manufacturer whose corporate site avonworldwide.com
+    has no developer, API or docs page; its old corporate domain avon-products.com is a GoDaddy for-sale
+    parking page and developer.avon.com no longer resolves, while the only Avon-branded contract found
+    — a Springfox Swagger at api.avon.com — is served by The Avon Company (Avon North America, LG H&H
+    until Regent's September 2026 purchase), a separate company since 2016, and so is not this provider's.
+  evidence:
+  - url: https://www.avon-products.com/lander
+    status: 307
+  - url: https://www.avonworldwide.com/
+    status: 403
+  - url: https://api.avon.com/swagger-resources
+    status: 200
+  - url: https://www.linkedin.com/company/avon-products/
+    status: 404
+  checked: '2026-09-18'

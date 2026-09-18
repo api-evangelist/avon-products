@@ -1,0 +1,182 @@
+generated: '2026-09-18'
+method: probed
+source: live GET probes, 2026-09-18
+note: 'Every named /.well-known/ path plus the APIs.json, llms.txt and openapi.json root paths were probed
+  on the three hosts that belong to this company: the registrable domain avon-products.com, its www, and
+  the live corporate site www.avonworldwide.com. NOTHING WAS SERVED. avon-products.com and www.avon-products.com
+  are a GoDaddy for-sale parking page: every path, including the negative-control path, answers 200 with
+  the same 114-byte HTML shell that redirects to /lander (a 307 to forsale.godaddy.com), and the /llms.txt
+  on those hosts is GoDaddy''s generic ''this domain is for sale'' text, not an Avon document. www.avonworldwide.com
+  sits behind an Akamai edge policy that answers 403 ''Access Denied'' to every unauthenticated crawler
+  request including the negative control, so its well-known paths are not observable from here; a second
+  fetcher that could reach the homepage got a 404 on /.well-known/security.txt. No WellKnown and no SecurityTxt
+  pointer is emitted: this file documents an absence, not a presence. The former Portal host developer.avon.com
+  no longer resolves in DNS. api.avon.com and www.avon.com were deliberately NOT probed for this record
+  — they belong to Avon North America (The Avon Company, a separate company since 2016; see x-coverage
+  in apis.yml).'
+hit_count: 0
+path_echo_control: failed-catch-all
+hosts:
+- host: https://avon-products.com
+  path_echo_control:
+    path: /.well-known/avon-negative-control-9c1e44b2.json
+    status: 200
+  note: 'GoDaddy parked domain: catch-all 200 HTML shell on every path; the 200s are NOT documents.'
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    served: html-shell
+  - path: /security.txt
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /apis.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/apis.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /llms.txt
+    status: 200
+    file: null
+    served: parking-provider-llms.txt
+  - path: /openapi.json
+    status: 200
+    file: null
+    served: html-shell
+- host: https://www.avon-products.com
+  path_echo_control:
+    path: /.well-known/avon-negative-control-9c1e44b2.json
+    status: 200
+  note: Same parking page as the apex; catch-all 200 HTML shell on every path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    served: html-shell
+  - path: /security.txt
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /apis.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /.well-known/apis.json
+    status: 200
+    file: null
+    served: html-shell
+  - path: /llms.txt
+    status: 200
+    file: null
+    served: parking-provider-llms.txt
+  - path: /openapi.json
+    status: 200
+    file: null
+    served: html-shell
+- host: https://www.avonworldwide.com
+  path_echo_control:
+    path: /.well-known/avon-negative-control-9c1e44b2.json
+    status: 403
+  note: Akamai edge policy (AkamaiGHost, "Access Denied", errors.edgesuite.net reference) on every path
+    including the negative control; not observable, not a served document. Out-of-band fetch of /.well-known/security.txt
+    returned 404.
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+  - path: /apis.json
+    status: 403
+    file: null
+  - path: /.well-known/apis.json
+    status: 403
+    file: null
+  - path: /llms.txt
+    status: 403
+    file: null
+  - path: /openapi.json
+    status: 403
+    file: null

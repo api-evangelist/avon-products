@@ -1,0 +1,13 @@
+generated: '2026-09-18'
+method: searched
+source: https://www.avonworldwide.com/ (out-of-band fetch), https://www.avon-products.com/ (parked), developer.avon.com
+  (NXDOMAIN), 2026-09-18
+limit_count: 0
+limits: []
+headers: []
+note: 'An honest zero. Avon Products publishes no API and therefore no rate limits: there is no developer
+  portal, no API reference and no terms of programmatic use on avonworldwide.com, avon-products.com is
+  a parked for-sale domain, and developer.avon.com does not resolve. No unauthenticated API response could
+  be observed on any host this company controls, so no rate-limit headers were captured either. The Springfox
+  Swagger surface at api.avon.com belongs to Avon North America (The Avon Company), a different company,
+  and was not used here.'
