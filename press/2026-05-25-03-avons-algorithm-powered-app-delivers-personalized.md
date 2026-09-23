@@ -1,7 +1,9 @@
 ---
 title: Avon's algorithm-powered app delivers personalized ...
 url: https://www.marketingdive.com/news/avons-algorithm-powered-app-delivers-personalized-makeup-tips/540925/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Avon Products" press release artificial intelligence'
 position: 3
 source: serpapi-google
